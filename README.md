@@ -8,7 +8,7 @@ To run this project on your local machine, follow these steps:
 
 1. **Clone the repository:**
 
-    git clone https://github.com/yourusername/employee-crud.git
+    git clone  https://github.com/Subhamnayak02/CosmoCloud-Employee-Management-App.git
     cd employee-crud
    
 
