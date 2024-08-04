@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Employee CRUD Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple CRUD Application built using React and CosmoCloud API It interacts with the CosmoCloud CRUD API to manage employee data.
 
-## Available Scripts
+## How to Run the Project Locally
 
-In the project directory, you can run:
+To run this project on your local machine, follow these steps:
 
-### `npm start`
+1. **Clone the repository:**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    git clone https://github.com/yourusername/employee-crud.git
+    cd employee-crud
+   
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Install dependencies:**
+    Make sure you have [Node.js](https://nodejs.org/) installed. Then run:
 
-### `npm test`
+    npm install
+    Additionally, install the necessary packages:
+    npm install axios react-router-dom react-icons
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+3. **Run the project:**
+    npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Open the app:**
+    Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Functionality
 
-### `npm run eject`
+This project is a simple CRUD application that uses the CosmoCloud API to manage employee records. It includes the following features:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Employee Listing Page (default page):**
+    - Displays a list of employees with their names and employee IDs.
+    - Users can open the employee details page or delete an employee.
+    - If no employees exist, a placeholder message is shown.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Employee Details Page:**
+    - Displays all the information of a specific employee.
+    - Allows users to delete or update the employee.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Add Employee Page:**
+    - Users can add a new employee with the following details:
+        - Name
+        - Address (line1, city, country, zip code)
+        - List of contact methods (email or phone)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## API Usage
 
-## Learn More
+The application interacts with the CosmoCloud API for CRUD operations:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Create Employee:**
+    - Endpoint: `POST https://free-ap-south-1.cosmocloud.io/development/api/employee`
+    - Headers:
+        - `projectId: "66a9edab39e2fdc09bbb9f9f"`
+        - `environmentId: "66a9edab39e2fdc09bbb9fa0"`
+        - `Content-Type: "application/json"`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Read Employees:**
+    - Endpoint: `GET https://free-ap-south-1.cosmocloud.io/development/api/employee`
+    - Headers:
+        - `projectId: "66a9edab39e2fdc09bbb9f9f"`
+        - `environmentId: "66a9edab39e2fdc09bbb9fa0"`
+    - Parameters: 
+        - `limit: 10`
+        - `offset: 0`
 
-### Code Splitting
+- **Read Employee Details:**
+    - Endpoint: `GET https://free-ap-south-1.cosmocloud.io/development/api/employee/{id}`
+    - Headers:
+        - `projectId: "66a9edab39e2fdc09bbb9f9f"`
+        - `environmentId: "66a9edab39e2fdc09bbb9fa0"`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Update Employee:**
+    - This functionality is to be implemented as per your requirements.
 
-### Analyzing the Bundle Size
+- **Delete Employee:**
+    - Endpoint: `DELETE https://free-ap-south-1.cosmocloud.io/development/api/employee/{id}`
+    - Headers:
+        - `projectId: "66a9edab39e2fdc09bbb9f9f"`
+        - `environmentId: "66a9edab39e2fdc09bbb9fa0"`
+    - Data: `{}`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
