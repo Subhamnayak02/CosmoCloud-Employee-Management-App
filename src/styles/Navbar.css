@@ -1,0 +1,27 @@
+.navbar {
+  background: rgb(15,10,97);
+background: linear-gradient(90deg, rgba(15,10,97,1) 13%, rgba(103,9,121,1) 63%, rgba(138,48,201,1) 100%, rgba(132,0,255,1) 100%);
+  color: #fff;
+
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.nav-links a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.text-gradient {
+  background: linear-gradient(90deg, #b490ff 0%, #eb7bc0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

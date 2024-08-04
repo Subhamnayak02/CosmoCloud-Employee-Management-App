@@ -1,0 +1,142 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  padding: 20px;
+
+}
+
+.employee-box {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-header, .employee-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.employee-header {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.header-item {
+  flex: 1;
+  text-align: left;
+}
+
+.header-name {
+  flex: 0 0 280px;
+  padding-left: 10px;
+}
+
+.header-id {
+  flex: 0 0 300px;
+}
+
+.employee-name {
+  flex: 0 0 150px;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+
+.employee-id {
+  flex: 0 0 150px;
+}
+
+.employee-actions {
+  flex: 0 0 200px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.employee-item {
+  padding: 10px;
+  text-align: left;
+}
+
+.update-button, .delete-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.update-button {
+  background-color: #007bff;
+}
+
+.delete-button {
+  background-color: #dc3545;
+}
+
+.update-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); 
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+  transform: scale(1.05); 
+}
+
+.add-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.add-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #218838;
+  transform: scale(1.05); 
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #007bff;
+  border-radius: 50%;
+  width: 40px; 
+  height: 40px; 
+  animation: spin 1s linear infinite;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
